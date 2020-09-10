@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+    
+    <section class="jumbotron text-center hero" >
+        <!--Logo-->
+        
+        <div class="overlay">
+            <div class="card-logo" style="width: 7.5rem; height: 7.5rem;padding-top: 4%;">
+                <img 
+                src="{{url_for('static', filename='img/logo1.png')}}" 
+                class="card-img-top" alt="...">
+            </div>
+            
+            <!--Hero container-->
+            <div class="container" style="padding-top: 6%;">
+            <h1>Album example</h1>
+            <p class="lead ">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>   
+                <a href="#games"><button class="b">Get the game!</button></a>
+            </div>
+        </div>
+    </section>
+        
+    <div class="container-fluid facts"></div>
+
+    <!-- Card sections -->
+    <div class="container-fluid background">  
+        <div class="overlay-games-section">
+        <br><br>
+        <h3 style="color:#93f357;
+        font-size: 1.7rem;text-align: center;" >Games arcade</h3>
+        <br>
+        {%for game in games%}     
+        <div class="row" id="games">
+            <div class="col-md-2 col-sm-2 col-xs-2"></div>
+            <div class="col-md-8 col-sm-8 col-xs-8">
+                <div class="card bg-dark text-white game-card">
+                    <img src="{{url_for('static', filename='img/pingpong.gif')}}" 
+                    class="card-img" alt="..." width="200" height="400">
+                    <div class="card-img-overlay" >
+                    <h2 class="card-title text-center game-card-title">{{game}}</h2>
+                    <p class="card-text text-center game-card-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras 
+                        nibh diam, convallis eget ante dapibus, consectetur vehicula 
+                        ex. Quisque euismod lacinia neque in pulvinar. Vestibulum
+                         nibh magna, maximus in urna eget, venenatis hendrerit turpis.
+                         Donec laoreet lectus in sem egestas, ac pulvinar ex sagittis. 
+                         Etiam placerat augue vel leo ornare, quis congue ligula consectetur. 
+                         Aliquam laoreet porta ornare. Proin nisi justo, viverra in urna in.
+                         </p>
+                         <a href="/game/pong"><button class="b">Get the game!</button></a>
+                    </div>
+                </div>
+                <br><br>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-2"></div>
+            </div>        
+        {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
+

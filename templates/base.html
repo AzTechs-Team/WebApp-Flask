@@ -11,94 +11,29 @@
 
     <!-- Main container -->
     <div >
-
+        
         <!-- Navbar -->
-        <nav class="navbar sticky-top navbar-light bg-light">
+        <nav class="navbar sticky-top navbar-dark ">
             <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-            <img src="https://getbootstrap.com/docs/4.5/assets/brand/bootstrap-solid.svg" 
-            width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-            Bootstrap
+            <a class="navbar-brand " 
+            href="/" 
+            style="color:#93f357;
+            font-size: 1.7rem;">
+            Respawn
             </a>
         </div>
         </nav>
-        
-        <!--Logo-->
-
-
-        <div class="card-logo" style="width: 6.5rem;">
-            <img 
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSklqoZ9snXRveCMzzOTem01SE8aw-RlVDFGQ&usqp=CAU" 
-            class="card-img-top" alt="...">
-        </div>
-
-
-        
-
-        <!--Hero container-->
-        <section class="jumbotron text-center">
-            <div class="container">
-              <h1>Album example</h1>
-              <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
-              <p>
-                <a href="#" class="btn btn-primary my-2">Main call to action</a>
-                <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-              </p>
-            </div>
-          </section>
-            
-        <div class="container-fluid">
-            <div class="card">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
-            <br>
-            <div class="card">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
-            <br>
-            <div class="card">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
-            <br>
-            <div class="card">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
-        </div>
-        
-        <br><br>
-        <footer class="footer">
-            <div class="container">
-              <span class="text-muted">Place sticky footer content here.</span>
+         
+        {% block body %} {% endblock %}
+               
+        <footer class="footer text-center" >
+            <div class="container" style="margin:15px auto;
+            color:white;font-size: 0.7em;" >
+              <span >Respawn created by Aztechs</span><br>
             </div>
           </footer>
         
     </div>
-    
-
-
-    {% block body %}{% endblock %}
-
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>

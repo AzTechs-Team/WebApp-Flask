@@ -5,12 +5,117 @@
 
 body{
     font-family: sans-serif;
+    background-color:rgb(21, 24, 22);
+}
+
+nav{    
+    background-color: rgba(20, 20, 20, 0.8);  
+}
+
+a:link{
+    text-decoration:none;
 }
 
 .card-logo{
-    margin: 0 auto; /* Added */
-    float: none; /* Added */
-    margin-bottom: 10px; /* Added */
+    margin: 0 auto; 
+    float: none; 
+    margin-bottom: 10px; 
 }
 
+section.jumbotron {
+    color:white;
+    background-image: url('/static/img/hero.gif');
+    height: 90vh;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    padding-top:0;
+    padding:auto 0;
+    background-attachment: fixed;
+    margin-bottom: 0;
+}
 
+div.overlay{
+    background-color: rgba(20, 20, 20, 0.5);
+    height: 90vh;
+    width:100%;
+    margin-bottom: 0;
+}
+
+button.b{
+    display: inline-block;
+    padding:5px 15px;
+    background-color:#93f357;
+    color: rgb(20, 20, 20);
+    border:0;
+}
+
+button.b:hover{
+    background-color:rgb(20, 20, 20);
+    color:#93f357;
+    border:0;
+}
+
+div.facts{
+    background-color: rgb(20, 20, 20);
+    height:50vh;
+    box-shadow: 3px 5px 15px #000 inset;
+}
+
+div.background{
+    margin-top:0;
+    background-image: url('/static/img/background.gif');
+    height: 165vh;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-attachment: fixed;
+}
+
+div.overlay-games-section{
+    background-color: rgba(20, 20, 20, 0.4);
+    height: 165vh;
+    width:100%;
+}
+
+div.card-img-overlay{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(20, 20, 20, 0.7);
+}
+
+div.game-card{
+    border:0;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2.game-card-title{
+    margin-top:2.5%;
+    margin-bottom: 2%;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+p.game-card-desc{
+    padding:4% auto;
+}
+
+section.game-download {
+    color:white;
+    background-image: url('/static/img/download.gif');
+    height: 100vh;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-attachment: fixed;
+}
+
+div.game-download-overlay{
+    background-color: rgba(20, 20, 20, 0.4);
+    height: 100vh;
+    width:100%;
+    margin-bottom: 0;
+}
