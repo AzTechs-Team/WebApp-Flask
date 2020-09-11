@@ -4,8 +4,8 @@
 {% block body %}
     
     <section class="jumbotron text-center hero" >
-        <!--Logo-->
         
+        <!--Logo-->
         <div class="overlay">
             <div class="card-logo" style="width: 7.5rem; height: 7.5rem;padding-top: 4%;">
                 <img 
@@ -14,15 +14,45 @@
             </div>
             
             <!--Hero container-->
-            <div class="container" style="padding-top: 6%;">
-            <h1>Album example</h1>
-            <p class="lead ">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>   
-                <a href="#games"><button class="b">Get the game!</button></a>
+            <div class="container" style="padding-top: 4%;">
+            <h1>Respawn</h1>
+            <h5 style="color:#93f357;">Cause needs another life!</h5>
+            <br>
+            <p >
+                Arcade games reborn using python!<br>
+                Download and play 2d arcade games made using pygame and kivy!!
+            </p>   
+            <br>
+                <a href="#games"><button class="b">Checkout the games!</button></a>
             </div>
         </div>
     </section>
         
-    <div class="container-fluid facts"></div>
+
+    <div class="container-fluid facts">
+        <div class="row">
+            <div class="col-md-2 col-sm-2 col-xs-2"></div>
+            <div class="col-md-8 col-sm-8 col-xs-8">
+                <p>{{data[1][0]}} is an original arcade game created in 
+                    {{data[1][1]}} by {{data[1][2]}} franchises!</p> 
+                <!-- <form action="/" method="post">
+                    <input type="submit" value="Get another fact" class="b" />
+                </form>  
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                    {% for message in messages %} -->
+                <!-- <p>{{messages[0]}} is an original arcade game created in 
+                    {{messages[1]}} by {{messages[2]}} franchises!</p> -->
+                        <!-- <h1>{{ message }}</h1>
+                    {% endfor %}
+                    {% endif %}
+                {% endwith %} -->
+                <a href='/'><button class="b">Get another fact!!</button></a>
+                </div> 
+            <div class="col-md-2 col-sm-2 col-xs-2"></div>
+        </div>
+    </div>
+
 
     <!-- Card sections -->
     <div class="container-fluid background">  
@@ -31,14 +61,14 @@
         <h3 style="color:#93f357;
         font-size: 1.7rem;text-align: center;" >Games arcade</h3>
         <br>
-        {%for game in games%}     
+        {%for game in data[0]%}     
         <div class="row" id="games">
             <div class="col-md-2 col-sm-2 col-xs-2"></div>
             <div class="col-md-8 col-sm-8 col-xs-8">
                 <div class="card bg-dark text-white game-card">
                     <img src="{{url_for('static', filename='img/pingpong.gif')}}" 
                     class="card-img" alt="..." width="200" height="400">
-                    <div class="card-img-overlay" >
+                    <div class="card-img-overlay"  >
                     <h2 class="card-title text-center game-card-title">{{game}}</h2>
                     <p class="card-text text-center game-card-desc">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras 

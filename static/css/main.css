@@ -44,22 +44,29 @@ div.overlay{
 
 button.b{
     display: inline-block;
-    padding:5px 15px;
+    padding:5px 18px;
     background-color:#93f357;
     color: rgb(20, 20, 20);
     border:0;
+    border-radius: 10px;
 }
 
 button.b:hover{
     background-color:rgb(20, 20, 20);
     color:#93f357;
-    border:0;
+    border:1px solid #93f357;
 }
 
 div.facts{
     background-color: rgb(20, 20, 20);
-    height:50vh;
+    height:40vh;
     box-shadow: 3px 5px 15px #000 inset;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+    text-align: center;
+    color:white;
 }
 
 div.background{
@@ -100,7 +107,13 @@ h2.game-card-title{
     font-weight: 600;
 }
 p.game-card-desc{
-    padding:4% auto;
+    padding:7px 8%;
+}
+
+@media only screen and (max-width: 600px) {
+    p.game-card-desc{
+        padding:0;
+    }
 }
 
 section.game-download {
@@ -118,4 +131,25 @@ div.game-download-overlay{
     height: 100vh;
     width:100%;
     margin-bottom: 0;
+}
+
+div.articles{
+    background-color: rgb(12, 10, 10);
+    color:white;
+    border:0;
+}
+
+div.articles-container{
+    margin-top:0;
+    background-image: url('/static/img/article_background.gif');
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-attachment: fixed;
+    height:250vh;
+}
+
+div.articles-overlay{
+    background-color: rgba(20, 20, 20, 0.5);
+    height: 250vh;
 }

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+
+    <div class="container-fluid articles-container" 
+    style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+        <div class="articles-overlay">
+        <br><br><br>
+        <h3 style="color:#93f357;
+        font-size: 1.7rem;text-align: center;" >Articles</h3>
+        <br>
+
+        {%for article in data%}    
+        <div class="card mb-3 articles" style="max-width: 800px; min-height: 250px;">
+            <div class="row no-gutters">
+                <div class="col-md-5">
+                <img src="{{data[article].img}}" class="card-img" alt="..."
+                height="280">
+                </div>
+                <div class="col-md-7">
+                <div class="card-body">
+                    <h5 class="card-title">{{data[article].title}}</h5>
+                    <p >{{data[article].author}}</p> <br>
+                    <p >{{data[article].info}}</p> 
+                    <a href="{{data[article].url}}" target="_blank"><button class="b">Checkout the article!</button></a>
+                </div>
+                </div>
+            </div>
+        </div> 
+        <br><br>
+        {% endfor %}
+        
+        </div>
+        <br><br><br>
+    </div>
+
+{% endblock %}
