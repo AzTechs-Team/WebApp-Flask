@@ -17,8 +17,8 @@ queries = "&field_list=name,release_date,themes,franchises&format=json&limit=1&f
 url = url_s+api_key+queries
 
 headers = {'user-agent': 'my-app/0.0.1'}
-# r1 = requests.get(url, headers=headers)
-# game_data = eval(r1.text)
-game_data = eval("{'error': 'OK', 'limit': 1, 'offset': 0, 'number_of_page_results': 1, 'number_of_total_results': 23, 'status_code': 1, 'results': [{'release_date': '2006-05-15 12:00:00', 'name': 'New Super Mario Bros.', 'themes': [], 'franchises': [{'name': 'New Super Mario Bros.'}]}], 'version': '1.0'}")
-print("Release Date : ",game_data["results"][0]["release_date"],"\n","This shit is working :)")
+r1 = requests.get(url, headers=headers)
+game_data = eval(r1.text)
+# game_data = eval("{'error': 'OK', 'limit': 1, 'offset': 0, 'number_of_page_results': 1, 'number_of_total_results': 23, 'status_code': 1, 'results': [{'release_date': '2006-05-15 12:00:00', 'name': 'New Super Mario Bros.', 'themes': [], 'franchises': [{'name': 'New Super Mario Bros.'}]}], 'version': '1.0'}")
+# print("Release Date : ",game_data["results"][0]["release_date"],"\n","This shit is working :)")
 sys.exit()
