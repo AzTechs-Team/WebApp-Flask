@@ -1,8 +1,6 @@
 {% extends 'base.html' %}
 
-
 {% block body %}
-
 
 <section class="jumbotron text-center game-download" >
     <div class="game-download-overlay">
@@ -13,7 +11,7 @@
                     <h1>{{data['name']}}</h1>
                     <p class="lead " style="font-size: 1.3em;">{{data['desc']}}</p>
                     <br>
-                    <button class="b">Download now!</button>
+                    <a href="/download" ><button class="b">Download now!</button></a>
                     <br><br><br>
                     <p class="card-text text-center game-card-desc">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras 
