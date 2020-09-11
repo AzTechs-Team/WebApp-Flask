@@ -1,8 +1,10 @@
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify, render_template, request, flash
 import requests
 import json
+import os
 app = Flask(__name__)
 app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
+app.secret_key = "NImit2801"
 
 
 @app.route('/smh')
@@ -16,6 +18,15 @@ def new_api():
     y = eval(r1.text)
     print(type(y))
     return y
+
+
+@app.route('/audio', methods=['GET', 'POST'])
+def audio():
+    if(request.method == 'POST'):
+        result = eval(request.form['expression'])
+        flash(result)
+        return flash(result)
+    return render_template('audio.html')
 
 
 if __name__ == '__main__':
